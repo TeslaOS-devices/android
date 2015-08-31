@@ -618,26 +618,4 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" remote="aosp" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" />
   <project path="vendor/cmsdk" name="CyanogenMod/cm_platform_sdk" />
-
-  <!-- Linaro -->
-  <!--
-  <project path="external/bison" name="platform/external/bison" groups="pdk" remote="linaro" />
-  <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs" remote="linaro" />
-  <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="linaro" />
-  <project path="external/expat" name="platform/external/expat" groups="pdk" remote="linaro" />
-  <!-- <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="linaro" /> -->
-  <!--
-  <project path="external/icu" name="platform/external/icu" groups="pdk" remote="linaro" />
-  <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs" remote="linaro" />
-  <project path="external/javassist" name="platform/external/javassist" groups="pdk-cw-fs" remote="linaro" />
-  <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" groups="pdk-cw-fs" remote="linaro" />
-  <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="linaro" />
-  <project path="external/openssl" name="platform/external/openssl" remote="linaro" />
-  <project path="external/svox" name="platform/external/svox" groups="pdk-cw-fs" remote="linaro" />
--->
-  <!-- UBER Toolchains -->
-  <!--
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="TeslaOS/arm-eabi-4.8-uber" remote="github" revision="master" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="TeslaOS/arm-linux-androideabi-4.8-uber" remote="github" revision="master" />
-  -->
 </manifest>
