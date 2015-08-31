@@ -4,7 +4,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-5.1.1_r13" />
+           revision="refs/tags/android-5.1.1_r6" />
 
   <!-- CyanogenMod default -->
   <remote  name="cyanogenmod"
@@ -43,22 +43,22 @@
   <project path="build" name="android_build" remote="teslaos" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="android" name="android" remote="teslaos" />
+  <project path="android" name="TeslaOS-devices/android" remote="github" revision="lp5.1" />
+  <!--
   <project path="art" name="android_art" remote="teslaos" />
   <project path="bionic" name="android_bionic" remote="teslaos" />
   <project path="libcore" name="android_libcore" remote="teslaos" />
+  -->
   <project path="frameworks/base" name="android_frameworks_base" remote="teslaos" />
   <project path="vendor/tesla" name="android_vendor_tesla" remote="teslaos" />
   <project path="packages/apps/TeslaWallpapers" name="android_packages_apps_TeslaWallpapers" remote="teslaos" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="teslaos" />
   <project path="packages/apps/SetupWizard" name="android_packages_apps_SetupWizard" remote="teslaos" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="teslaos" />
+  <!-- <project path="frameworks/av" name="android_frameworks_av" remote="teslaos" /> -->
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
-  <!--
   <project path="art" name="CyanogenMod/android_art" groups="pdk" />
   <project path="bionic" name="CyanogenMod/android_bionic" groups="pdk" />
-  -->
   <project path="bootable/recovery" name="omnirom/android_bootable_recovery" remote="github" revision="android-5.1" />
   <project path="cts" name="CyanogenMod/android_cts" groups="cts,pdk-cw-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs" remote="aosp" />
@@ -103,7 +103,7 @@
   <project path="external/apache-xml" name="platform/external/apache-xml" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/arduino" name="platform/external/arduino" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/bash" name="CyanogenMod/android_external_bash" />
-  <!-- <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" /> -->
+  <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" groups="pdk" />
   <project path="external/bouncycastle" name="CyanogenMod/android_external_bouncycastle" />
@@ -160,18 +160,18 @@
   <project path="external/dnsmasq" name="CyanogenMod/android_external_dnsmasq" groups="pdk" />
   <project path="external/doclava" name="platform/external/doclava" groups="pdk-cw-fs,tradefed" remote="aosp" />
   <project path="external/dropbear" name="CyanogenMod/android_external_dropbear" />
-  <!-- <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs" remote="aosp" /> -->
+  <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/e2fsprogs" name="CyanogenMod/android_external_e2fsprogs" groups="pdk" />
   <project path="external/easymock" name="platform/external/easymock" groups="pdk-cw-fs,tradefed" remote="aosp" />
   <project path="external/ebtables" name="CyanogenMod/android_external_ebtables" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/eigen" name="platform/external/eigen" groups="pdk-cw-fs" remote="aosp" />
-  <!-- <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" /> -->
+  <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
   <project path="external/emma" name="platform/external/emma" groups="pdk-cw-fs,tradefed" remote="aosp" />
   <project path="external/esd" name="platform/external/esd" groups="pdk-cw-fw" remote="aosp" />
   <project path="external/exfat" name="CyanogenMod/android_external_exfat" />
-  <!-- <project path="external/expat" name="platform/external/expat" groups="pdk" remote="aosp" /> -->
+  <project path="external/expat" name="platform/external/expat" groups="pdk" remote="aosp" />
   <project path="external/eyes-free" name="platform/external/eyes-free" groups="pdk-cw-fw" remote="aosp" />
   <project path="external/f2fs-tools" name="CyanogenMod/android_external_f2fs-tools" groups="pdk" />
   <project path="external/fdlibm" name="platform/external/fdlibm" groups="pdk" remote="aosp" />
@@ -201,16 +201,16 @@
   <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" remote="aosp" />
   <project path="external/heimdall" name="CyanogenMod/android_external_heimdall" />
   <project path="external/htop" name="CyanogenMod/android_external_htop" />
-  <!-- <project path="external/icu" name="CyanogenMod/android_external_icu" groups="pdk" /> -->
+  <project path="external/icu" name="CyanogenMod/android_external_icu" groups="pdk" />
   <project path="external/iproute2" name="CyanogenMod/android_external_iproute2" groups="pdk" />
   <project path="external/ipsec-tools" name="platform/external/ipsec-tools" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/iptables" name="CyanogenMod/android_external_iptables" groups="pdk-cw-fs" />
-  <!-- <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs" remote="aosp" /> -->
+  <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/jack" name="platform/external/jack" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/JakeWharton/butterknife" name="CyanogenMod/android_external_JakeWharton_butterknife" />
   <project path="external/jarjar" name="CyanogenMod/android_external_jarjar" groups="pdk" />
   <project path="external/javasqlite" name="platform/external/javasqlite" groups="pdk-cw-fs" remote="aosp" />
-  <!-- <project path="external/javassist" name="platform/external/javassist" groups="pdk-cw-fs" remote="aosp" /> -->
+  <project path="external/javassist" name="platform/external/javassist" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/jdiff" name="platform/external/jdiff" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/jemalloc" name="platform/external/jemalloc" groups="pdk" remote="aosp" />
   <project path="external/jhead" name="platform/external/jhead" groups="pdk" remote="aosp" />
@@ -265,11 +265,11 @@
   <project path="external/libxml2" name="CyanogenMod/android_external_libxml2" groups="pdk-cw-fs" />
   <project path="external/libxslt" name="CyanogenMod/android_external_libxslt" />
   <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv,pdk-cw-fs" remote="aosp" />
-  <!-- <project path="external/linux-tools-perf" name="CyanogenMod/android_external_linux-tools-perf" groups="pdk-cw-fs" /> -->
+  <project path="external/linux-tools-perf" name="CyanogenMod/android_external_linux-tools-perf" groups="pdk-cw-fs" />
   <project path="external/libtruezip" name="CyanogenMod/android_external_libtruezip" />
   <project path="external/littlemock" name="platform/external/littlemock" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/lldb" name="platform/external/lldb" groups="pdk-cw-fs" remote="aosp" />
-  <!-- <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="aosp" /> -->
+  <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="aosp" />
   <project path="external/lohit-fonts" name="platform/external/lohit-fonts" remote="aosp" />
   <project path="external/ltrace" name="platform/external/ltrace" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/lsof" name="CyanogenMod/android_external_lsof" />
@@ -303,7 +303,7 @@
   <project path="external/opencv" name="platform/external/opencv" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/openfst" name="platform/external/openfst" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/openssh" name="CyanogenMod/android_external_openssh" />
-  <!-- <project path="external/openssl" name="CyanogenMod/android_external_openssl" /> -->
+  <project path="external/openssl" name="CyanogenMod/android_external_openssl" />
   <project path="external/oprofile" name="platform/external/oprofile" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/owasp/sanitizer" name="platform/external/owasp/sanitizer" remote="aosp" />
   <project path="external/pciutils" name="CyanogenMod/android_external_pciutils" />
@@ -311,7 +311,7 @@
   <project path="external/pdfium" name="platform/external/pdfium" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/pigz" name="CyanogenMod/android_external_pigz" />
   <project path="external/pixman" name="platform/external/pixman" remote="aosp" />
-  <!-- <project path="external/powertop" name="CyanogenMod/android_external_powertop" /> -->
+  <project path="external/powertop" name="CyanogenMod/android_external_powertop" />
   <project path="external/ppp" name="platform/external/ppp" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/proguard" name="platform/external/proguard" groups="pdk-java,tradefed" remote="aosp" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" remote="aosp" />
@@ -341,7 +341,7 @@
   <project path="external/stlport" name="platform/external/stlport" groups="pdk" remote="aosp" />
   <project path="external/strace" name="CyanogenMod/android_external_strace" groups="pdk-cw-fs" />
   <project path="external/stressapptest" name="platform/external/stressapptest" groups="pdk-cw-fs" remote="aosp" />
-  <!-- <project path="external/svox" name="platform/external/svox" groups="pdk-cw-fs" remote="aosp" /> -->
+  <project path="external/svox" name="platform/external/svox" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/tagsoup" name="platform/external/tagsoup" groups="pdk-cw-fs,tradefed" remote="aosp" />
   <project path="external/tcpdump" name="CyanogenMod/android_external_tcpdump" groups="pdk,pdk-cw-fs" />
   <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" remote="aosp" />
@@ -369,7 +369,7 @@
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" remote="aosp" />
-  <!-- <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" /> -->
+  <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" />
   <project path="frameworks/compile/libbcc" name="CyanogenMod/android_frameworks_compile_libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="CyanogenMod/android_frameworks_compile_mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="CyanogenMod/android_frameworks_compile_slang" groups="pdk" />
@@ -470,7 +470,7 @@
   <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
   <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" />
-  <!-- <project path="libcore" name="CyanogenMod/android_libcore" /> -->
+  <project path="libcore" name="CyanogenMod/android_libcore" />
   <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" remote="aosp" />
   <project path="packages/apps/AudioFX" name="CyanogenMod/android_packages_apps_AudioFX" />
@@ -575,10 +575,8 @@
   <project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" groups="pdk,darwin,x86" remote="aosp" revision="master" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" groups="pdk,linux,arm" remote="aosp" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="CyanogenMod/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" />
-  <!--
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" groups="pdk,linux,arm" remote="aosp" />
-  -->
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" groups="pdk,linux" remote="aosp" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="pdk,linux" remote="aosp" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" remote="aosp" />
@@ -622,11 +620,13 @@
   <project path="vendor/cmsdk" name="CyanogenMod/cm_platform_sdk" />
 
   <!-- Linaro -->
+  <!--
   <project path="external/bison" name="platform/external/bison" groups="pdk" remote="linaro" />
   <project path="external/droiddriver" name="platform/external/droiddriver" groups="pdk-cw-fs" remote="linaro" />
   <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="linaro" />
   <project path="external/expat" name="platform/external/expat" groups="pdk" remote="linaro" />
   <!-- <project path="external/freetype" name="platform/external/freetype" groups="pdk" remote="linaro" /> -->
+  <!--
   <project path="external/icu" name="platform/external/icu" groups="pdk" remote="linaro" />
   <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs" remote="linaro" />
   <project path="external/javassist" name="platform/external/javassist" groups="pdk-cw-fs" remote="linaro" />
@@ -634,9 +634,10 @@
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="linaro" />
   <project path="external/openssl" name="platform/external/openssl" remote="linaro" />
   <project path="external/svox" name="platform/external/svox" groups="pdk-cw-fs" remote="linaro" />
-
+-->
   <!-- UBER Toolchains -->
+  <!--
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="TeslaOS/arm-eabi-4.8-uber" remote="github" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="TeslaOS/arm-linux-androideabi-4.8-uber" remote="github" revision="master" />
-
+  -->
 </manifest>
